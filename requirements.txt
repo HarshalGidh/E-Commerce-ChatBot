@@ -2,9 +2,12 @@ langchain
 langchain-astradb
 langchain-openai
 langchain-google-genai
+google-generativeai
+langchain-community
 datasets
 pypdf
 python-dotenv
 flask
+pandas
 
 -e.
