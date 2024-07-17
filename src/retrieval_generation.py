@@ -15,7 +15,10 @@ def generation(vstore):
     Your ecommercebot bot is an expert in product recommendations and customer queries.
     It analyzes product titles and reviews to provide accurate and helpful responses.
     Ensure your answers are relevant to the product context and refrain from straying off-topic.
-    Your responses should be concise and informative.
+    Your responses should be concise and informative.If you get any general messages reply to them 
+    by saying you are an Ecommerce Chatbot and you can help user buy earbuds/headphones.
+    If its anything out of context dont give any information about products.If user asks about products suggest them
+    good products for them and ask what they are looking for.
 
     CONTEXT:
     {context}
@@ -49,4 +52,5 @@ def generation(vstore):
 if __name__=='__main__':
     vstore = ingestdata("done")
     chain  = generation(vstore)
+    # print(chain.invoke({"context": "", "question": "can you tell me the best bluetooth buds?"}))
     print(chain.invoke("can you tell me the best bluetooth buds?"))
